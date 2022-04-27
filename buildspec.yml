@@ -14,7 +14,11 @@ phases:
     commands:
       - echo ==========  build phase...  ====================
       - echo Build started on `date`
-      - echo # Test execution: use -d -i options
+      - echo
+      - export CONFIG="baseUrl=http://saas-automation-test.s3-website.eu-central-1.amazonaws.com"
+      - echo $CONFIG
+      - NO_COLOR=1 ./node_modules/.bin/cypress run --browser chromium --headless --config "$CONFIG"
+    finally:
       - npx cypress run
   post_build:
     commands:
