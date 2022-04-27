@@ -5,16 +5,17 @@ phases:
     runtime-versions:
       nodejs: latest
     commands:
+      - npm install
       - npm ci
 
   pre_build:
     commands:
-      - npm run cy:verify
-      - npm run cy:info
+      #- npm run cy:verify
+      #- npm run cy:info
 
   build:
     commands:
-      - npm run start:ci &
+      #- npm run start:ci &
       - npx cypress run --browser chromium
 
   post_build:
