@@ -10,17 +10,19 @@ phases:
 
   pre_build:
     commands:
-      - npm run cy:verify
-      - npm run cy:info
+      #- npm run cy:verify
+      #- npm run cy:info
+      - npm install --save-dev cypress-cucumber-preprocessor
 
   build:
     commands:
-      - npm run start:ci &
-      - npx cypress run --browser chromium
+      #- npm run start:ci &
+      #- npx cypress run --browser chromium
+      - npx cypress run 
 
   post_build:
     commands:
-      - npm run chromium-report
+      #- npm run chromium-report
 
 artifacts:
   files:
