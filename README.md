@@ -1,1 +1,0 @@
-# DemoCypress_Omena
