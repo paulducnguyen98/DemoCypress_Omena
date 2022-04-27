@@ -4,6 +4,7 @@ const {Given, When, Then} = require('cypress-cucumber-preprocessor/steps');
 
 When(/^Go to booking UI$/, () => {
     cy.visit('https://test2.omenahotels.com/en/booking/');
+    cy.wait(20000);
 });
 
 
