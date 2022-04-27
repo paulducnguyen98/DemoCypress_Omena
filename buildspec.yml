@@ -5,15 +5,15 @@ phases:
     runtime-versions:
         nodejs: 12
     pre_build:
-    commands:
-      - echo ==========  pre-build phase...  ====================
-      - npm install
-      - npm install --save-dev cypress-cucumber-preprocessor
-      - npm --version
+      commands:
+        - echo ==========  pre-build phase...  ====================
+        - npm install
+        - npm install --save-dev cypress-cucumber-preprocessor
+        - npm --version
     build:
-    commands:
-      - npx cypress run
-      - ls
+      commands:
+        - npx cypress run
+        - ls
 artifacts:
   files:
     - 'cypress/videos/**/*'
