@@ -15,7 +15,7 @@ phases:
       - echo ==========  build phase...  ====================
       - echo Build started on `date`
       - echo # Test execution: use -d -i options
-       - npx cypress run
+      - npx cypress run
   post_build:
     commands:
       - echo ==========  post-build phase...  ====================
